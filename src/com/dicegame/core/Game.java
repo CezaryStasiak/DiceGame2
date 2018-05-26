@@ -8,6 +8,7 @@ import com.dicegame.player.Player;
 public class Game {
 
 	private Player player;
+	private Scanner sc;
 	
 	public void addPlayer(Player player){
 		this.player = player;
@@ -15,7 +16,7 @@ public class Game {
 	
 	public void start(){
 		Random dice = new Random();
-		Scanner sc = new Scanner(System.in);
+		sc = new Scanner(System.in);
 
 		int number, guess = 1;
 

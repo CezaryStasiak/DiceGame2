@@ -11,9 +11,16 @@ public abstract class Player {
 	}
 
 	public void setName(String name) {
-		if (name.length() < 3 | name.contains(" "))
-			throw (new IllegalArgumentException());
-		else
-			this.name = name;
+
+		try {
+			if (name.length() < 3 | name.contains(" "))
+				throw (new IllegalArgumentException());
+			else
+				this.name = name;
+		} catch (IllegalArgumentException e) {
+			System.out.println("Podane imie jest nieprawidlowe!");
+			System.out.println("Imie nie moze zawierac spacji i musi miec minimum 3 znaki !");
+		};
+
 	}
 }

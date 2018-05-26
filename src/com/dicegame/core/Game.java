@@ -21,13 +21,8 @@ public class Game {
 
 		System.out.println("Podaj imie dla gracza :");
 
-		try {
-			player.setName(sc.nextLine());
-		} catch (IllegalArgumentException e) {
-			System.out.println("Podane imie jest nieprawidlowe!");
-			System.out.println("Imie nie moze zawierac spacji i musi miec minimum 3 znaki !");
-		};
-
+		player.setName(sc.nextLine());
+		
 		do {
 			number = dice.nextInt(6) + 1;
 			System.out.println("Wylosowane: " + number);
@@ -43,11 +38,7 @@ public class Game {
 			}
 
 		} while (number != guess);
-		
-		
-		
-		
-
+	
 	}
 	
 }

@@ -43,6 +43,10 @@ public class Game {
 			}
 
 		} while (number != guess);
+		
+		
+		
+		
 
 	}
 	

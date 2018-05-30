@@ -4,9 +4,14 @@ import java.util.Random;
 
 public class PlayerComp extends Player {
 
+	public PlayerComp(String name) {
+		super(name);
+	}
+
 	private Random dice = new Random();
 
 	public int guess() {
-		return dice.nextInt(6) + 1;
+		this.guess = dice.nextInt(6) + 1;
+		return guess;
 	}
 }
